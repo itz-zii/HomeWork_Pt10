@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin:25%;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    position: relative;
+    background: rgb(200, 200, 200);
+    color: white;
+    padding: 10px 30px;
+    border: transparent solid 0px;
+    border-radius: 5px;
+}
+
+span {
+    position: relative;
+}
+
+button::before {
+    content: "";
+    background: red;
+    transform-origin: bottom right;
+    transition: scale 0.25s;
+    border-radius: 5px;
+    scale: 0;
+    inset: 0;
+    position: absolute;
+}
+
+button:hover::before {
+    scale: 1;
+    transform-origin: top left;
+}

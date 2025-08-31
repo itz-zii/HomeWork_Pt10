@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 25%;
+}
+
+.form {
+    position: relative;
+    margin: 20px 0;
+    width: 250px;
+}
+
+input {
+    border: 1px solid gray;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    outline: none;
+    background: none;
+  }
+
+.form label {
+    position: absolute;
+    left: 12px;
+    top: 30%;
+    pointer-events: none;
+    transition: 0.3s ease;
+    padding: 0 4px;
+    color: gray;
+}
+
+.form input:focus + label {
+    top: -8px;
+    color: purple;
+    background-color: white;
+}
+
+.form input:valid + label {
+    top: -8px;
+    background-color: white;
+}
+
+input:focus {
+    border-color: purple;
+    color: purple;
+}
